@@ -26,4 +26,4 @@ RUN mkdir /www && ln -s /www /opt/lampp/htdocs
 VOLUME ["/www"]
 
 EXPOSE 3306 443 80
-CMD ["/opt/lampp/lampp", "start"]
+CMD lampp start && tail -F /opt/lampp/logs/error_log
